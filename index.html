@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta>
+    <title>
+        Custom Select Menu Design - Easy Tutorials
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hero">
+<div class="selector">
+<div id="selectorField">
+<p id="selectText">Select Social Media</p>
+<img src="SelectMenu_Img/SelectMenu_Img/arrow.png" id="arrowIcon">
+</div>
+<ul id="list" class="hide">
+    <li class="options">
+        <img src="SelectMenu_Img/SelectMenu_Img/facebook.png">
+        <p>Facebook</p>
+    </li>
+    <li class="options">
+        <img src="SelectMenu_Img/SelectMenu_Img/youtube.png">
+        <p>Youtube</p>
+    </li>
+    <li class="options">
+        <img src="SelectMenu_Img/SelectMenu_Img/instagram.png">
+        <p>Instagram</p>
+    </li>
+    <li class="options">
+        <img src="SelectMenu_Img/SelectMenu_Img/twitter.png">
+        <p>Twitter</p>
+    </li>
+    <li class="options">
+        <img src="SelectMenu_Img/SelectMenu_Img/pinterest.png">
+        <p>Pinterest</p>
+    </li>
+    <li class="options">
+        <img src="SelectMenu_Img/SelectMenu_Img/whatsapp.png">
+        <p>WhatsApp</p>
+    </li>
+</ul>
+
+</div>
+</div>
+<script>
+var selectorField=document.getElementById("selectorField");
+var selectText=document.getElementById("selectText");
+var options=document.getElementsByClassName("options");
+var list= document.getElementById("list");
+var arrowIcon=document.getElementById("arrowIcon");
+
+selectorField.onclick=function(){
+list.classList.toggle("hide");
+arrowIcon.classList.toggle("rotate");
+
+}
+
+for(option of options){
+    option.onclick = function(){
+        selectText.innerHTML=this.textContent;
+        list.classList.toggle("hide");
+        arrowIcon.classList.toggle("rotate");
+
+    }
+}
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+</html>
